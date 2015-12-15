@@ -17,7 +17,7 @@ Route::get('postagem',function()
 });
 
 Route::get('/', function () {
-    return view('exemplo');
+        return view('exemplo');
 });
 
 Route::get('postagem/adicionar', function()
