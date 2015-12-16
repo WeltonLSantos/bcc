@@ -1,5 +1,7 @@
 @extends('templates.template')
 
 @section('content')
-    Cadastrar nova postagem...
-    @stop
+    <!--CORPO AQUI-->
+    <h1>aw</h1>
+
+@stop

@@ -1,3 +1,32 @@
 php artisan serve 
 php artisan key:generate
 APP_DEBUG=true do arquivo .env
+php artisan make:controller NameDoController 
+php artisan make:controller NameDoController --plain
+
+------------------------------------------------------------------------------------------------------------------
+vc vai colocar la no link <a href="{{ route('sistema.gerente') }}">Link</a>
+na rota vc vai colocar
+Route::get('gerente', ['as' => 'sistema.gerente', 'uses' => 'ControllerLink@linkGerente']);
+ la no ControllerLink vc vai colocar:
+public function linkGerente()
+{
+return view('sistema.gerente');
+}
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+debug https://github.com/GrahamCampbell/Laravel-Exceptions
+ laravel new welton
+> cd welton/
+> composer update
+> composer require filp/whoops --dev
+> composer require graham-campbell/exceptions
+> subl config\app.php
+Inseri, dentro do array 'providers' o valor:
+GrahamCampbell\Exceptions\ExceptionsServiceProvider::class,
+> subl App\Exceptions\Handler.php
+Comentei a linha
+//use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+e inseri a linha
+use GrahamCampbell\Exceptions\ExceptionHandler as ExceptionHandler;
+------------------------------------------------------------------------------------------------------------------
